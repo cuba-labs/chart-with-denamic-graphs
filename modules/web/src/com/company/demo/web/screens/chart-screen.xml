@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://caption"
+        class="com.company.demo.web.screens.ChartScreen"
+        messagesPack="com.company.demo.web.screens"
+        xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
+    <layout expand="xyChart" spacing="true">
+        <button caption="Add" invoke="addGraph"/>
+        <chart:xyChart id="xyChart"
+                       autoMarginOffset="20"
+                       marginBottom="60"
+                       marginLeft="64"
+                       theme="LIGHT"
+                       width="100%">
+            <chart:chartCursor/>
+            <chart:valueAxes>
+                <chart:axis axisAlpha="0"
+                            dashLength="1"
+                            position="BOTTOM"
+                            title="X Axis"/>
+                <chart:axis axisAlpha="0"
+                            dashLength="1"
+                            position="LEFT"
+                            title="Y Axis"/>
+            </chart:valueAxes>
+            <chart:export position="BOTTOM_RIGHT"/>
+        </chart:xyChart>
+    </layout>
+</window>
